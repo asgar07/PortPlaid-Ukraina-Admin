@@ -1,0 +1,153 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PortPlaid
+build_property.RootNamespace = PortPlaid
+build_property.ProjectDir = D:\projects\PortPlaidArea\PortPlaid-Area\PortPlaidArea\PortPlaid\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\projects\PortPlaidArea\PortPlaid-Area\PortPlaidArea\PortPlaid
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/OrderItem/OrderCheck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtXE9yZGVyQ2hlY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AccountingAreaIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWNjb3VudGluZ0FyZWFJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AllAssembled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWxsQXNzZW1ibGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AllRussianAngarAssembled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWxsUnVzc2lhbkFuZ2FyQXNzZW1ibGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarRussianIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJSdXNzaWFuSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarRussianWaiting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJSdXNzaWFuV2FpdGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarTurkeyAllAssembledDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJUdXJrZXlBbGxBc3NlbWJsZWREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarTurkeyHalfAssembledDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJUdXJrZXlIYWxmQXNzZW1ibGVkRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarTurkeyIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJUdXJrZXlJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarTurkeyWaiting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJUdXJrZXlXYWl0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/AngarTurkeyWaitingDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQW5nYXJUdXJrZXlXYWl0aW5nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetAngarRussianAllAssembledDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0QW5nYXJSdXNzaWFuQWxsQXNzZW1ibGVkRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetAngarRussianWaitingDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0QW5nYXJSdXNzaWFuV2FpdGluZ0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetHandleAccounting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0SGFuZGxlQWNjb3VudGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetHandleProblem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0SGFuZGxlUHJvYmxlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetHandleReturnAccounting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0SGFuZGxlUmV0dXJuQWNjb3VudGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/GetOrderInOrderItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0T3JkZXJJbk9yZGVySXRlbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/HalfAssembled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSGFsZkFzc2VtYmxlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ProblemAreaIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUHJvYmxlbUFyZWFJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ProblemWaiting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUHJvYmxlbVdhaXRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ProblemWaitingReturnAccounting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUHJvYmxlbVdhaXRpbmdSZXR1cm5BY2NvdW50aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ProblemWaitingReturnAccountingDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUHJvYmxlbVdhaXRpbmdSZXR1cm5BY2NvdW50aW5nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/Resolved.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUmVzb2x2ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ResolvedDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUmVzb2x2ZWREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Order/ReturnAccounting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUmV0dXJuQWNjb3VudGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/PortPlaidArea/PortPlaid-Area/PortPlaidArea/PortPlaid/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-40kzxdqnf1

@@ -1,0 +1,79 @@
+﻿@model List<OrderDto>
+@{
+    ViewData["Title"] = "AccountingAreaIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var count = 1;
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Orders table</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center justify-content-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order Code</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CreateTime</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Client Name</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Client PhoneNumber</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">TotalPrice</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">ProductCount</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Setting</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xs font-weight-bold">@count</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.OrderCode</p>
+                                    </td>
+                                     <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.CreatTime</p>
+                                    </td>
+
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.DeliveryClientName </p>
+                                    </td>
+
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.DeliveryClientPhoneNumber</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.TotalPrice</p>
+                                    </td>
+
+                                    <td class="align-middle text-center">
+
+                                        <p class="text-xl font-weight-bold">@item?.ProductCount</p>
+
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+
+                                            <a class="btn bg-gradient-dark" asp-controller="Order" asp-action="GetHandleAccounting" asp-route-Id="@item?.Id"><i class="fas fa-plus"></i>&nbsp;&nbsp;Handle the problem</a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

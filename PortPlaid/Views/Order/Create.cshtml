@@ -1,0 +1,71 @@
+﻿@*@model OrderDto
+@{
+    ViewData["Title"] = "Create";
+}
+
+  public string OrderCode { get; set; }
+        public string PostName { get; set; }
+        public string City { get; set; }
+        public string PostOffice { get; set; }
+        public string DeliveryClientName { get; set; }
+        public string DeliveryClientPhoneNumber { get; set; }
+        public float TotalPrice { get; set; }
+        public float WeightFirst { get; set; }
+        public float? WeightEnd { get; set; }
+        public float TotalProductPrice { get; set; }
+        public float TotalDeliveryPrice { get; set; }
+        public int ProductCount { get; set; }
+
+<div class="card-body">
+    <form method="post" asp-action="Create" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <input asp-for="appUser" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="OrderCode"  class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="PostName" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="City" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="PostOffice" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="DeliveryClientName" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="DeliveryClientPhoneNumber" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+        </div>
+
+
+          <div class="mb-3">
+            <input asp-for="TotalPrice" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="WeightFirst" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+  </div>
+        <div class="mb-3">
+            <input asp-for="TotalProductPrice" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="TotalDeliveryPrice" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+        </div>
+        <div class="mb-3">
+            <input asp-for="ProductCount" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+        </div>
+      
+       
+        <div class="text-center">
+            <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Create</button>
+        </div>
+      
+    </form>
+</div>
+
+*@

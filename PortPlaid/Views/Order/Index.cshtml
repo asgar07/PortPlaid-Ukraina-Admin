@@ -1,0 +1,173 @@
+﻿@model List<OrderDto>
+@{
+    ViewData["Title"] = "Index";
+    var count = 1;
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Orders table</h6>
+                <div style="justify-content:space-evenly;" class="d-flex">
+                    <button id="start" class="badge badge-sm bg-gradient-success">Start</button><button class="badge badge-sm bg-gradient-danger" id="stop">Stop</button>
+                </div>
+          
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center justify-content-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order Code</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CreateTime</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Client Name</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Client PhoneNumber</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">TotalPrice</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">ProductCount</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Setting</th>                               
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xs font-weight-bold">@count</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.OrderCode</p>
+                                    </td>
+                                      <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.CreatTime</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.DeliveryClientName </p>
+                                    </td>
+
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.DeliveryClientPhoneNumber</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xl font-weight-bold">@item?.TotalPrice</p>
+                                    </td>
+
+                                    <td class="align-middle text-center">
+
+                                        <p class="text-xl font-weight-bold">@item?.ProductCount</p>
+
+                                    </td>                            
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                    
+                                             @*   <input id="ordid" asp-for="@item.Commentari.OrderId" type="hidden" value="@item.Id">
+                                            <input id="managid" asp-for="@item.Commentari.OrderId" type="hidden" value="@item.ManagerId">*@
+                                             
+                                            
+                                            <input id="dt" asp-for="@item.Commentari.GetStarted" type="hidden" value="@DateTime.Now">
+                                           
+                                                <a id="@item.Id" class="btn bg-gradient-dark item" ><i class="fas fa-plus"></i>&nbsp;&nbsp;Emal Et</a>
+
+                                           
+
+                                  
+
+                                       
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                count++;
+                            }                                                 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+<script>
+
+        let notcreate = document.getElementById("notcreate");
+
+    notcreate.addEventListener("click", () => {
+
+          
+                alert("This Order Is From Another Manager It is being processed");
+          
+    
+    });
+        
+
+ </script>
+
+    <script>
+
+        let createtime = document.getElementById("createtime");
+        $(document).ready(function () {
+            let url = "/StartManagerSession"
+            $("#start").click(function (event) {
+                fetch(url, {
+                    method: 'POST', // or 'PUT'
+                    headers: {
+                        'orderid': $(this).attr("id")
+                    }
+                }).then(res => res.json())
+                    .then(response => console.log('Success:', JSON.stringify(response)))
+                    .catch(error => console.error('Error:', error));
+                
+            });
+        });
+
+    
+        $(document).ready(function () {
+            let url = "/StopManagerSession"
+            $("#stop").click(function (event) {
+                fetch(url, {
+                    method: 'POST', // or 'PUT'
+                    headers: {
+                        'orderid': $(this).attr("id")
+                    }
+                }).then(res => res.json())
+                    .then(response => console.log('Success:', JSON.stringify(response)))
+                    .catch(error => console.error('Error:', error));
+
+            });
+        });
+
+        $(".item").click(function () {
+                let url = "/CheckOrderId/" + this.id;
+                
+
+                fetch(url, {
+                    method: 'POST', // or 'PUT'
+                   
+                }).then(res => res)
+                    .then(response => {
+                        if(Boolean(response)){
+                            // redirect to a new page using replace()
+                            window.location.replace(`/Order/GetOrderInOrderItems/${this.id}`);
+
+                        }else{
+                            alert("This order alredy assigned manager ")
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+
+            
+        });
+
+
+        
+
+
+    </script>
+}

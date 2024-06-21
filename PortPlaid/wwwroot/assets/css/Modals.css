@@ -1,0 +1,220 @@
+﻿
+/* The Modal (background) */
+.problemmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color:inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 22%;
+    top: 0;
+    margin-top: 15 px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.problemmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 80%;
+}
+
+/* The Close Button */
+/*.closespan {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .closespan:hover,
+    .closespan:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }*/
+
+
+
+
+
+
+/* The Modal (background) */
+.confirmmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 55%;
+    top: 0;
+    margin-top: 15 px;
+    width: 60%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.confirmmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 70%;
+}
+
+/* The Close Button */
+/*.confirmclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .confirmclose:hover,
+    .confirmclose:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }*/
+
+
+
+
+
+/* The Modal (background) */
+.buxaltermodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 25% !important;
+    top: 0;
+    margin-top: 15 px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.buxaltermodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 100%;
+}
+
+
+
+
+/* The Modal (background) */
+.returnbuxaltermodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 25% !important;
+    top: 0;
+    margin-top: 15 px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.returnbuxaltermodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 100%;
+}
+
+
+/* The Modal (background) */
+.managersendangarmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 25% !important;
+    top: 0;
+    margin-top: 15 px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.managersendangarmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.weightmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: inherit !important;
+    padding-top: 150px; /* Location of the box */
+    left: 35% !important;
+    top: 0;
+    margin-top: 50 px !important;
+    width: 50%; /* Full width */
+    height: 50%; /* Full height */
+    /*overflow: auto;*/ /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.weightmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    //border: 1px solid #888;
+    border-radius: 5%;
+    border-style: groove;
+    width: 100%;
+}

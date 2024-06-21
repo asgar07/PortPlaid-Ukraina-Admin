@@ -1,0 +1,385 @@
+﻿@model OrderEditDto
+@{
+    ViewData["Title"] = "GetHandleAccounting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Order Code : @Model.OrderCode</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center justify-content-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Name</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Link</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Color</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Size</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price Lira</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price Rubl</th>
+
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Completion</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.OrderItems)
+                            {
+                                <tr>
+                                    <td>
+                                        <img style="width:50px; height:60px;" src="~/assets/images/@item?.ProductImage" alt="" class="text-xs font-weight-bold" />
+                                    </td>
+                                    <td>
+                                        <div class="d-flex px-2">
+
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm">@item?.ProductName</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <a href="@item?.ProductLink" class="btn bg-gradient-danger mb-0">сылка</a>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold">@item?.ProductColor</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold">@item?.ProductSize</span>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-bold mb-0">@item?.ProductPriceLira</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-bold mb-0">@item?.ProductPriceRubl</p>
+                                    </td>
+
+                                    <td class="align-middle">
+
+                                        <span class="badge badge-sm bg-gradient-danger">Pending</span>
+
+                                    </td>
+                                    <td class="align-middle text-center">
+                                       @* <div class="d-flex align-items-center justify-content-center">*@
+                                            <div >
+
+                                        
+
+                                                @if (item.ConfirmSuccess != false)
+                                                {
+                                                    <h6 style="display:block; font-size:12px">транзакции: @item?.TransactionCode</h6>
+                                                    <button disabled class="btn bg-gradient-success mb-0">Подтвержден</button>
+                                                    <h6 style="display:block; font-size:12px">деливерй: @item?.DeliveryCode</h6>
+
+
+                                                }
+                                                else
+                                                {
+
+                                                    <button disabled class="btn bg-gradient-danger mb-0">Problem</button>
+
+                                                }
+
+                                       
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-4">
+
+
+    <div class="row">
+
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">User Details</h6>
+                </div>
+                <div class="card-body p-3">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; @Model?.UserName @Model?.UserSurname</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; @Model?.UserPhoneNumber  </li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; @Model?.UserEmail</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; @Model?.OrderPaymenInfo.PaymentMethod</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Poct Details</h6>
+                </div>
+                <div class="card-body p-3">
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">City:</strong> &nbsp; @Model?.City</li>
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">PostName:</strong> &nbsp; @Model?.PostName  </li>
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">PostOffice:</strong> &nbsp; @Model?.PostOffice</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Delivery Client Name:</strong> &nbsp; @Model?.DeliveryClientName</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Delivery Client Number:</strong> &nbsp; @Model?.DeliveryClientPhoneNumber</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Product Details</h6>
+                </div>
+                <div class="card-body p-3">
+                    <ul class="list-group">
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">OrderCode:</strong> &nbsp; @Model?.OrderCode</li>
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">TotalPrice:</strong> &nbsp; @Model?.TotalPrice  </li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">WeightFirst:</strong> &nbsp; @Model?.WeightFirst</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">TotalProductPrice:</strong> &nbsp; @Model?.TotalProductPrice</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">TotalDeliveryPrice:</strong> &nbsp; @Model?.TotalDeliveryPrice  </li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">ProductCount:</strong> &nbsp; @Model?.ProductCount</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Информация о перемещений посылки</h6>
+                </div>
+
+
+                @foreach (var item in Model?.Comments)
+                {
+
+                    if (item.GetStarted != null)
+                    {
+                        <div class="card-body p-3">
+                            <ul class="list-group">
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Заказ был обработан:</strong> &nbsp; @item?.GetStarted</li>
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Менеджер:</strong> &nbsp; @item?.CommenterName  </li>
+
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+
+                    }
+
+
+
+                    if (item.ChangeStatusTime != null)
+                    {
+                                <div class="card-body p-3">
+                                    <ul class="list-group">
+                                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Заказ был перемещен в @item?.ChangeStatusName:</strong> &nbsp;  @item?.ChangeStatusTime</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Менеджер:</strong> &nbsp;   @item?.CommenterName </li>
+
+                                    </ul>
+                                </div>
+                    }
+                    else
+                    {
+
+                    }
+
+
+                }
+             @*   <div class="card-body p-3">
+                    <ul class="list-group">
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Заказ был обработан:</strong> &nbsp; 07.04.2023 12:40</li>
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Менеджер:</strong> &nbsp; саша белый  </li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Заказ был перемещен в проблемные:</strong> &nbsp;  07.04.2023 12:50</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Менеджер:</strong> &nbsp;  саша белый</li>
+
+
+
+                    </ul>
+                </div>*@
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card ">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Комментарий</h6>
+                </div>
+
+                @foreach (var item in Model.Comments)
+                {
+                    @if (item.Comment != null && item.CommenterName != null)
+                    {
+                        <div class="card-body p-3">
+                            <ul class="list-group">
+                                    <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Комментарий от @item?.Department:</strong> &nbsp; </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">@item?.Comment </li>
+                                <li class="list-group-item border-0 ps-0 text-sm">@item?.ReturnMethod </li>
+
+                                <li class="list-group-item border-0 ps-0 text-sm">@item?.BankCard </li>
+                                <li class="list-group-item border-0 ps-0 text-sm">@item?.ReturnPrice</li>
+
+
+
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+            @*    <div class="card-body p-3">
+                    <ul class="list-group">
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Комментарий от менеджера:</strong> &nbsp; </li>
+                        <li class="list-group-item border-0 ps-0 text-sm">Товар закончился,не смогла купить </li>
+
+
+
+                    </ul>
+                </div>
+
+                <div class="card-body p-3">
+                    <ul class="list-group">
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Комментарий от проблемные заказы:</strong> &nbsp; </li>
+                        <li class="list-group-item border-0 ps-0 text-sm">Клиент запросил возврат на карту </li>
+
+
+
+                    </ul>
+                </div>
+
+                <div class="card-body p-3">
+                    <ul class="list-group">
+
+
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Комментарий от Бухалтерии:</strong> &nbsp; </li>
+                        <li class="list-group-item border-0 ps-0 text-sm">Средства были возвращены. Номер транзакции:3123123  </li>
+
+
+
+                    </ul>
+                </div>*@
+            </div>
+        </div>
+        <div class="col-12 col-xl-4 d-flex justify-content-between">
+            <div class="mt-5"> </div><div class="mt-5"><button id="buxalterbtn" class="btn bg-gradient-success mb-0 mt-5">Уведомить проблемный о возврате средств </button>@*<button id="ProblemOpenModal" class="btn bg-gradient-danger mb-0">Проблемный заказ</button><*@</div>
+
+        </div>
+    </div>
+
+
+    <div id="BuxalterModal" class="problemmodal col-9">
+
+        <!-- Modal content -->
+        <div class="buxaltermodal-content">
+            @*  <span class="problemclose closespan">&times;</span>*@
+            <p>Проблемные заказы..</p>
+            <form method="post" asp-action="ReturnAccountingIsProblem">
+                <div class="d-flex">
+                   
+                 
+                    <div style="margin-left:150px;" class="mb-3 col-4">
+                        <div>
+                            <label>Оставить комментарий для проблемный</label>
+                            <input id="ordid" asp-for="@Model.ProblemDto.CommentDto.OrderId" type="hidden" value="@Model.Id">
+
+                            <input asp-for="@Model.ProblemDto.CommentDto.Comment" class="form-control" placeholder="Значение" aria-label="Значение" aria-describedby="email-addon">
+                        </div>
+                        <input asp-for="@Model.ProblemDto.OrderStatuses.Id" type="hidden" value="@Model.OrderStatuses.Id" />
+
+
+                    </div>
+                </div>
+
+                <div class="mb-3">
+
+                    <div class=" d-flex justify-content-between">
+                        <div> </div><div><span class="btn bg-gradient-danger mb-0 buxalterclose">Отмена</span><button type="submit" class="btn bg-gradient-success mb-0">Подвердить</button></div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+@section Scripts{
+    <script>
+        // Get the modal
+        var buxaltermodal = document.getElementById("BuxalterModal");
+
+        // Get the button that opens the modal
+        var buxalterbtn = document.getElementById("buxalterbtn");
+
+        // Get the <span> element that closes the modal
+        var buxalterspan = document.getElementsByClassName("buxalterclose")[0];
+
+        // When the user clicks the button, open the modal
+        buxalterbtn.onclick = function () {
+            buxaltermodal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        buxalterspan.onclick = function () {
+            buxaltermodal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == buxaltermodal) {
+                buxaltermodal.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+}

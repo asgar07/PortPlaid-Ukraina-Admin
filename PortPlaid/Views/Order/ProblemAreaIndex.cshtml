@@ -1,0 +1,24 @@
+﻿@model List<OrderDto>
+@{
+    ViewData["Title"] = "ProblemAreaIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var count = 1;
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0  d-flex">
+                <a asp-controller="Order" asp-action="ProblemWaiting" class="btn btn-outline-primary">Ожиданное</a>
+                <a asp-controller="Order" asp-action="ProblemWaitingReturnAccounting" class="btn btn-outline-secondary">Ожиданное от бухальтера</a>
+
+                <a asp-controller="Order" asp-action="ReturnAccounting" class="btn btn-outline-danger">возврат от бухгалтера</a>
+                <a asp-controller="Order" asp-action="Resolved" class="btn btn-outline-success"> решенным</a>
+
+            </div>
+           
+     
+        </div>
+    </div>
+</div>

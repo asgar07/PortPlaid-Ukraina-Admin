@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "AngarRussianIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+   int count = 1;
+}
+
+<div class="row">
+    <span id="success-alert" style="display:none; background-color:green">Success</span>
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0  d-flex">
+                <a asp-controller="Order" asp-action="AngarRussianWaiting" class="btn btn-outline-primary">Ожиданное</a>
+
+                <a asp-controller="Order" asp-action="AllRussianAngarAssembled" class="btn btn-outline-success"> все собраны</a>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-12">
+        <div style="height:200px;" class="card mb-4 col-6">
+            @*     <form>*@
+
+
+            <div class="card-header pb-0  d-flex">
+                <input id="ordercode" type="text" class="form-control" placeholder="Order Code" />
+            </div>
+            @*  </form>*@
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script>
+
+        document.getElementById("ordercode").addEventListener("change", myFunction);
+        
+        function myFunction(){
+            var x = document.getElementById("ordercode");
+            console.log(x.value);
+            //if (x.value.length > 5) {
+
+
+            var url = '/CheckOrderCodeInOrder';
+
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'orderCode': x.value,
+
+                }
+            }).then(res => res)
+                .then(response => {
+                    console.log('Success:', JSON.stringify(response));
+                    // show success alert message
+                    var alert = document.getElementById("success-alert");
+                    alert.style.display = "block";
+                    // hide success alert message after 3 seconds
+                    setTimeout(() => {
+                        alert.style.display = "none";
+                    }, 3000);
+                    // clear the input field after 3 seconds
+                    setTimeout(() => {
+                        x.value = '';
+                    }, 3000);
+                })
+                .catch(error => console.error('Error:', error));
+            //}
+
+
+        };
+
+    </script>
+}
